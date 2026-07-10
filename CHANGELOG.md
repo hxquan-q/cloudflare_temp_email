@@ -15,6 +15,7 @@
 
 ### Bug Fixes
 
+- fix: |CI| 后端部署 workflow 在缺少 `CLOUDFLARE_ACCOUNT_ID`、`CLOUDFLARE_API_TOKEN` 或 `BACKEND_TOML` secrets 时会跳过 deploy 并给出 warning，避免未配置密钥时任务直接失败
 - fix: |AI 提取| 强化提示词，要求 AI 保持邮件原始链接域名，避免小模型改写验证链接域名导致错误跳转（issue #1072）
 - fix: |AI 提取| HTML-only 邮件在发送给 Workers AI 前会先压缩为可读文本，避免样式模板过长导致验证码位于 4000 字截断之后而无法识别
 - fix: |Frontend| 移动端 Header 增加页头内边距，避免标题、菜单按钮与屏幕边缘过近
